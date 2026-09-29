@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
-PATTERNS = {"mission": re.compile(r"^BC_MISSION_[A-Z0-9_]+$"), "evidence": re.compile(r"^BC_EVIDENCE_[A-Z0-9_]+$"), "character": re.compile(r"^BC_CHAR_[A-Z0-9_]+$"), "faction": re.compile(r"^BC_FACTION_[A-Z0-9_]+$"), "region": re.compile(r"^BC_REGION_[A-Z0-9_]+$"), "location": re.compile(r"^BC_LOCATION_[A-Z0-9_]+$"), "route": re.compile(r"^BC_ROUTE_[A-Z0-9_]+$"), "transport": re.compile(r"^BC_TRANSPORT_[A-Z0-9_]+$")}
+PATTERNS = {"mission": re.compile(r"^BC_MISSION_[A-Z0-9_]+$"), "evidence": re.compile(r"^BC_EVIDENCE_[A-Z0-9_]+$"), "character": re.compile(r"^BC_CHAR_[A-Z0-9_]+$"), "faction": re.compile(r"^BC_FACTION_[A-Z0-9_]+$"), "region": re.compile(r"^BC_REGION_[A-Z0-9_]+$"), "location": re.compile(r"^BC_LOCATION_[A-Z0-9_]+$"), "route": re.compile(r"^BC_ROUTE_[A-Z0-9_]+$"), "transport": re.compile(r"^BC_TRANSPORT_[A-Z0-9_]+$"), "travel_state": re.compile(r"^BC_TRAVEL_STATE_[A-Z0-9_]+$")}
 
 def load(path: Path) -> Any:
     with path.open(encoding="utf-8") as handle:
@@ -33,13 +33,13 @@ def check_ref(value: Any, kind: str, label: str, known: dict[str, set[str]], err
         errors.append(f"unknown {label}: {value}")
 
 def validate(root: Path = ROOT) -> list[str]:
-    names = ("missions", "evidence", "regions", "locations", "characters", "factions", "routes", "transport")
+    names = ("missions", "evidence", "regions", "locations", "characters", "factions", "routes", "transport", "travel_states")
     files = {name: load(root / "data" / f"{name}.json") for name in names}
     collections = {name: files[name].get(name, []) for name in names}
     errors: list[str] = []
     known: dict[str, set[str]] = {}
     for name, items in collections.items():
-        kind = "transport" if name == "transport" else name.rstrip("s")
+        kind = {"transport": "transport", "travel_states": "travel_state"}.get(name, name.rstrip("s"))
         known[kind], local = ids(items, kind)
         errors.extend(local)
     for item in collections["locations"]:
@@ -64,13 +64,21 @@ def validate(root: Path = ROOT) -> list[str]:
         for field, kind in (("origin_region_id", "region"), ("destination_region_id", "region"), ("origin_location_id", "location"), ("destination_location_id", "location")):
             check_ref(item.get(field), kind, f"{field} in {route_id}", known, errors)
         for transport_type in item.get("transport_types", []):
-            if not any(item.get("type") == transport_type for item in collections["transport"]):
+            if not any(transport.get("type") == transport_type for transport in collections["transport"]):
                 errors.append(f"unknown transport type in {route_id}: {transport_type}")
         if not item.get("deterministic_inputs"):
             errors.append(f"route has no deterministic inputs: {route_id}")
     for item in collections["transport"]:
         if not PATTERNS["transport"].fullmatch(item.get("id", "")):
             errors.append(f"invalid transport id: {item.get('id')}")
+    for item in collections["travel_states"]:
+        state_id = item.get("id")
+        if not PATTERNS["travel_state"].fullmatch(state_id or ""):
+            errors.append(f"invalid travel state id: {state_id}")
+        if "random" in item:
+            errors.append(f"travel state contains forbidden random field: {state_id}")
+        for target in item.get("allowed_next", []):
+            check_ref(target, "travel_state", f"travel transition from {state_id}", known, errors)
     return errors
 
 def main() -> int:
