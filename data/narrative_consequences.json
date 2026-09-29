@@ -1,0 +1,8 @@
+{
+  "consequences": [
+    {"id":"BC_CONSEQUENCE_LEDGER_FOUND","trigger":"BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY","character_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","effects":["mission_chain_opened","underground_rail_attention_increases"],"reversible":false},
+    {"id":"BC_CONSEQUENCE_SIGNAL_VERIFIED","trigger":"BC_EVIDENCE_IRONWORK_SIGNATURE","character_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","effects":["ironwork_rescue_unlocked","abolitionist_network_trust_increases"],"reversible":false},
+    {"id":"BC_CONSEQUENCE_RESCUE_DELIVERED","trigger":"BC_RESCUE_ASHGROVE_FAMILY","effects":["family_reaches_safe_destination","free_community_capacity_decreases","underground_rail_reputation_increases"],"reversible":false},
+    {"id":"BC_CONSEQUENCE_REQUIREMENTS_FAILED","trigger":"failed_requirements","effects":["no_inventory_mutation","no_reputation_mutation","rescue_remains_undelivered"],"reversible":true}
+  ]
+}

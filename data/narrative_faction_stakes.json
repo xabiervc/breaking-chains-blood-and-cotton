@@ -1,0 +1,8 @@
+{
+  "stakes": [
+    {"faction_id":"BC_FACTION_UNDERGROUND_RAIL","priority":"protect_routes","cost_of_failure":"routes_exposed","benefit_of_success":"trust_and_transport_access"},
+    {"faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","priority":"protect_people","cost_of_failure":"retaliation_against_safehouse","benefit_of_success":"safe_capacity_and_shelter"},
+    {"faction_id":"BC_FACTION_ABOLITIONIST_NETWORK","priority":"preserve_evidence","cost_of_failure":"evidence_lost_or_discredited","benefit_of_success":"public_pressure_and_contacts"},
+    {"faction_id":"BC_FACTION_PLANTATION_OVERSEERS","priority":"maintain_control","cost_of_failure":"loss_of_workers_and_records","benefit_of_success":"continued_surveillance"}
+  ]
+}

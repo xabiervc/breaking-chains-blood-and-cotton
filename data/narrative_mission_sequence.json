@@ -1,0 +1,6 @@
+{
+  "missions": [
+    {"sequence":10,"mission_id":"BC_MISSION_LEDGER_ASHGROVE_ENTRY","arc_id":"BC_ARC_ASHGROVE_IRONWORK_CHAIN","protagonist_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","requires":[],"reveals":["BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY"],"unlocks":["BC_MISSION_LEDGER_IRONWORK_SIGNAL"],"stakes":"Descubrir si el registro es una pista real o una trampa"},
+    {"sequence":20,"mission_id":"BC_MISSION_LEDGER_IRONWORK_SIGNAL","arc_id":"BC_ARC_ASHGROVE_IRONWORK_CHAIN","protagonist_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","requires":["BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY"],"reveals":["BC_EVIDENCE_IRONWORK_SIGNATURE"],"unlocks":["BC_RESCUE_ASHGROVE_FAMILY","BC_RESCUE_IRONWORK_WORKERS"],"stakes":"Confirmar la cadena sin exponer la red"}
+  ]
+}

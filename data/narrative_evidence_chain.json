@@ -1,0 +1,6 @@
+{
+  "chain": [
+    {"evidence_id":"BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY","sequence":10,"source_location_id":"BC_LOCATION_ASHGROVE_PLANTATION","meaning":"Registra un patrón de transferencias y nombres abreviados","next_evidence_id":"BC_EVIDENCE_IRONWORK_SIGNATURE"},
+    {"evidence_id":"BC_EVIDENCE_IRONWORK_SIGNATURE","sequence":20,"source_location_id":"BC_LOCATION_IRONWORKS","meaning":"Vincula el patrón de Ashgrove con Ironwork","next_evidence_id":null}
+  ]
+}
