@@ -1,0 +1,7 @@
+{
+  "scenarios": [
+    {"id":"BC_SCENARIO_ASHGROVE_SUCCESS","operation_id":"BC_OPERATION_PREPARE_ASHGROVE_RESCUE","rescue_id":"BC_RESCUE_ASHGROVE_FAMILY","from_status":"available","to_status":"delivered","travel_states":["BC_TRAVEL_STATE_AVAILABLE","BC_TRAVEL_STATE_IN_TRANSIT","BC_TRAVEL_STATE_ARRIVED"],"result":"accepted","deterministic":true},
+    {"id":"BC_SCENARIO_IRONWORK_REQUIREMENTS_FAILURE","operation_id":"BC_OPERATION_PREPARE_IRONWORK_RESCUE","rescue_id":"BC_RESCUE_IRONWORK_WORKERS","from_status":"available","to_status":"failed_requirements","travel_states":["BC_TRAVEL_STATE_AVAILABLE","BC_TRAVEL_STATE_FAILED_REQUIREMENTS"],"result":"failed_requirements","deterministic":true}
+  ],
+  "results":["accepted","failed_requirements"]
+}

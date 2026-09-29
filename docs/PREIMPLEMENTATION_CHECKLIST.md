@@ -9,6 +9,7 @@
 - [x] Recursos, operaciones y reputación.
 - [x] Operaciones de misión y transiciones de rescate.
 - [x] Eventos de auditoría y guardas de seguridad.
+- [x] Escenarios end-to-end de éxito y fallo.
 
 ## Integración
 
@@ -17,10 +18,11 @@
 - [x] Economía separada de las personas rescatadas.
 - [x] Idempotencia documentada.
 - [x] Ausencia de azar oculto documentada.
+- [x] Contratos verificados mediante escenarios completos.
 
 ## Verificación
 
-- [x] Tests unitarios, transversales e invariantes presentes.
+- [x] Tests unitarios, transversales, invariantes y end-to-end presentes.
 - [x] Validador global presente.
 - [x] Validador de esquemas y JSON presente.
 - [x] Workflow de GitHub Actions configurado.
