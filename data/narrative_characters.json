@@ -1,0 +1,7 @@
+{
+  "characters": [
+    {"id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","canonical_character_id":"BC_CHAR_ISAIAH_BELL","role":"protagonist","knowledge_at_start":["BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY"],"goal":"Verificar y conectar las pistas de Ashgrove e Ironwork sin exponer la red","fear":"Actuar demasiado tarde o comprometer a quienes confían en él"},
+    {"id":"BC_NARRATIVE_GROUP_ASHGROVE_FAMILY","person_id":"BC_PERSON_ASHGROVE_FAMILY","role":"rescue_group","goal":"Llegar a un destino seguro sin separar a la familia","fear":"Ser separados durante el traslado"},
+    {"id":"BC_NARRATIVE_GROUP_IRONWORK_WORKERS","person_id":"BC_PERSON_IRONWORK_WORKERS","role":"rescue_group","goal":"Escapar de la vigilancia y recibir atención segura","fear":"Que la señal provoque represalias antes de la salida"}
+  ]
+}

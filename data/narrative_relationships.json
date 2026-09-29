@@ -1,0 +1,8 @@
+{
+  "relationships": [
+    {"id":"BC_REL_ISAIAH_UNDERGROUND_RAIL","from_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","to_faction_id":"BC_FACTION_UNDERGROUND_RAIL","type":"conditional_trust","initial_value":0,"change_condition":"rescues_delivered"},
+    {"id":"BC_REL_ISAIAH_FREE_COMMUNITY","from_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","to_faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","type":"earned_protection","initial_value":0,"change_condition":"safe_destination_reached"},
+    {"id":"BC_REL_ISAIAH_ABOLITIONIST_NETWORK","from_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","to_faction_id":"BC_FACTION_ABOLITIONIST_NETWORK","type":"evidence_exchange","initial_value":0,"change_condition":"ironwork_signal_verified"},
+    {"id":"BC_REL_NETWORK_OVERSEERS","from_faction_id":"BC_FACTION_PLANTATION_OVERSEERS","to_faction_id":"BC_FACTION_UNDERGROUND_RAIL","type":"active_pursuit","initial_value":-2,"change_condition":"exposure_detected"}
+  ]
+}

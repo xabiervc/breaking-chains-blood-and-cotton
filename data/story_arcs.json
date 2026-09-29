@@ -1,0 +1,6 @@
+{
+  "arcs": [
+    {"id":"BC_ARC_ISAIAH_VERIFICATION","protagonist_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","stages":["discover","connect","verify","act","confront"],"central_question":"¿Puede Isaiah convertir pruebas parciales en una acción segura?","resolution_condition":"at_least_one_rescue_delivered"},
+    {"id":"BC_ARC_ASHGROVE_IRONWORK_CHAIN","protagonist_id":"BC_NARRATIVE_CHAR_ISAIAH_BELL","stages":["ledger_found","signature_linked","signal_verified","rescue_attempted"],"central_question":"¿Son Ashgrove e Ironwork partes de la misma cadena?","resolution_condition":"ironwork_signal_verified"}
+  ]
+}
