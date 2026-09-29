@@ -1,0 +1,10 @@
+{
+  "gates": [
+    {"id":"BC_GATE_VALIDATE_REFERENCES","operation_type":"all","checks":["references_exist","ids_match_patterns","schemas_present"],"on_failure":"reject"},
+    {"id":"BC_GATE_CHECK_RESOURCES","operation_type":"resource_consumption","checks":["amount_positive","balance_sufficient","minimum_not_breached"],"on_failure":"failed_requirements"},
+    {"id":"BC_GATE_CHECK_REPUTATION","operation_type":"reputation_change","checks":["faction_exists","delta_nonzero","bounds_preserved"],"on_failure":"reject"},
+    {"id":"BC_GATE_CHECK_RESCUE","operation_type":"rescue_transition","checks":["person_exists","destination_exists","transition_allowed","capacity_sufficient"],"on_failure":"failed_requirements"},
+    {"id":"BC_GATE_NO_HIDDEN_RANDOMNESS","operation_type":"all","checks":["deterministic_inputs","no_undeclared_random_fields"],"on_failure":"reject"}
+  ],
+  "failure_results":["rejected","failed_requirements","duplicate"]
+}

@@ -1,0 +1,9 @@
+{
+  "events": [
+    {"id":"BC_AUDIT_MISSION_OPERATION","event_type":"mission_operation","required_fields":["event_id","operation_id","mission_id","actor_id","timestamp","inputs","outputs","result"],"idempotency_key":"operation_id"},
+    {"id":"BC_AUDIT_RESOURCE_CONSUMPTION","event_type":"resource_consumption","required_fields":["event_id","operation_id","resource_id","amount","before","after","result"],"idempotency_key":"operation_id"},
+    {"id":"BC_AUDIT_REPUTATION_CHANGE","event_type":"reputation_change","required_fields":["event_id","operation_id","faction_id","delta","before","after","result"],"idempotency_key":"operation_id"},
+    {"id":"BC_AUDIT_RESCUE_TRANSITION","event_type":"rescue_transition","required_fields":["event_id","operation_id","rescue_id","from_status","to_status","result"],"idempotency_key":"operation_id"}
+  ],
+  "results":["accepted","rejected","failed_requirements","duplicate"]
+}
