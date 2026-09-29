@@ -22,6 +22,12 @@ class RouteDataTests(unittest.TestCase):
         defined = {item["type"] for item in transport}
         for route in routes:
             self.assertTrue(set(route["transport_types"]) <= defined)
+    def test_route_regions_match_endpoint_locations(self):
+        data = {name: json.loads((ROOT / "data" / f"{name}.json").read_text(encoding="utf-8"))[name] for name in ("routes", "locations")}
+        locations = {item["id"]: item["region_id"] for item in data["locations"]}
+        for route in data["routes"]:
+            self.assertEqual(locations[route["origin_location_id"]], route["origin_region_id"])
+            self.assertEqual(locations[route["destination_location_id"]], route["destination_region_id"])
     def test_content_validator_still_passes(self):
         self.assertEqual(validate(ROOT), [])
 if __name__ == "__main__":
