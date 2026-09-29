@@ -1,135 +1,66 @@
 #!/usr/bin/env python3
-"""Validate structured mission and evidence content."""
-
+"""Validate structured content and cross-catalog references."""
 from __future__ import annotations
-
 import argparse
 import json
 import re
 import sys
 from pathlib import Path
 from typing import Any
-
 ROOT = Path(__file__).resolve().parents[1]
-MISSION_ID = re.compile(r"^BC_MISSION_[A-Z0-9_]+$")
-EVIDENCE_ID = re.compile(r"^BC_EVIDENCE_[A-Z0-9_]+$")
-CHARACTER_ID = re.compile(r"^BC_CHAR_[A-Z0-9_]+$")
-FACTION_ID = re.compile(r"^BC_FACTION_[A-Z0-9_]+$")
-REGION_ID = re.compile(r"^BC_REGION_[A-Z0-9_]+$")
-LOCATION_ID = re.compile(r"^BC_LOCATION_[A-Z0-9_]+$")
+PATTERNS = {"mission": re.compile(r"^BC_MISSION_[A-Z0-9_]+$"), "evidence": re.compile(r"^BC_EVIDENCE_[A-Z0-9_]+$"), "character": re.compile(r"^BC_CHAR_[A-Z0-9_]+$"), "faction": re.compile(r"^BC_FACTION_[A-Z0-9_]+$"), "region": re.compile(r"^BC_REGION_[A-Z0-9_]+$"), "location": re.compile(r"^BC_LOCATION_[A-Z0-9_]+$")}
 
-
-def load_json(path: Path) -> Any:
+def load(path: Path) -> Any:
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
 
-
-def unique_ids(items: list[dict[str, Any]], key: str, label: str) -> list[str]:
-    errors: list[str] = []
-    seen: set[str] = set()
+def ids(items: list[dict[str, Any]], label: str) -> tuple[set[str], list[str]]:
+    found, errors = set(), []
     for index, item in enumerate(items):
-        value = item.get(key)
+        value = item.get("id") if isinstance(item, dict) else None
         if not isinstance(value, str) or not value:
-            errors.append(f"{label}[{index}] has no valid {key}")
-        elif value in seen:
+            errors.append(f"{label}[{index}] has no valid id")
+        elif value in found:
             errors.append(f"duplicate {label} id: {value}")
         else:
-            seen.add(value)
-    return errors
+            found.add(value)
+    return found, errors
 
-
-def check_pattern(value: str, pattern: re.Pattern[str], label: str, errors: list[str]) -> None:
-    if not pattern.fullmatch(value):
+def check_ref(value: Any, kind: str, label: str, known: dict[str, set[str]], errors: list[str]) -> None:
+    if not isinstance(value, str) or not PATTERNS[kind].fullmatch(value):
         errors.append(f"invalid {label}: {value}")
-
-
-def validate_missions(data: dict[str, Any], evidence_ids: set[str]) -> list[str]:
-    errors: list[str] = []
-    missions = data.get("missions")
-    if not isinstance(missions, list):
-        return ["missions.json must contain a missions array"]
-    errors.extend(unique_ids(missions, "id", "mission"))
-    mission_ids = {item.get("id") for item in missions if isinstance(item, dict)}
-    required = {"id", "act", "classification", "region_id", "location_id", "prerequisites", "objectives", "evidence_granted", "failure_states", "success_state", "characters", "factions", "resources", "rewards", "reputation_effects", "deterministic_inputs", "tags"}
-    for mission in missions:
-        if not isinstance(mission, dict):
-            errors.append("mission entries must be objects")
-            continue
-        missing = required - mission.keys()
-        errors.extend(f"{mission.get('id', '<unknown>')} missing field: {field}" for field in sorted(missing))
-        mission_id = mission.get("id")
-        if isinstance(mission_id, str):
-            check_pattern(mission_id, MISSION_ID, "mission id", errors)
-        for prerequisite in mission.get("prerequisites", []):
-            if isinstance(prerequisite, str) and prerequisite.startswith("BC_MISSION_") and prerequisite not in mission_ids:
-                errors.append(f"{mission_id} references unknown mission prerequisite: {prerequisite}")
-        for evidence_id in mission.get("evidence_granted", []):
-            if evidence_id not in evidence_ids:
-                errors.append(f"{mission_id} references unknown evidence: {evidence_id}")
-        for character_id in mission.get("characters", []):
-            if isinstance(character_id, str):
-                check_pattern(character_id, CHARACTER_ID, "character id", errors)
-        for faction_id in mission.get("factions", []):
-            if isinstance(faction_id, str):
-                check_pattern(faction_id, FACTION_ID, "faction id", errors)
-        if isinstance(mission.get("region_id"), str):
-            check_pattern(mission["region_id"], REGION_ID, "region id", errors)
-        if isinstance(mission.get("location_id"), str):
-            check_pattern(mission["location_id"], LOCATION_ID, "location id", errors)
-    return errors
-
-
-def validate_evidence(data: dict[str, Any], mission_ids: set[str]) -> list[str]:
-    errors: list[str] = []
-    evidence = data.get("evidence")
-    if not isinstance(evidence, list):
-        return ["evidence.json must contain an evidence array"]
-    errors.extend(unique_ids(evidence, "id", "evidence"))
-    for item in evidence:
-        if not isinstance(item, dict):
-            errors.append("evidence entries must be objects")
-            continue
-        evidence_id = item.get("id")
-        if isinstance(evidence_id, str):
-            check_pattern(evidence_id, EVIDENCE_ID, "evidence id", errors)
-        if isinstance(item.get("source_location"), str):
-            check_pattern(item["source_location"], LOCATION_ID, "evidence source location", errors)
-        for mission_id in item.get("required_for", []):
-            if mission_id not in mission_ids:
-                errors.append(f"{evidence_id} references unknown mission: {mission_id}")
-    return errors
-
-
-def validate_cross_references(missions: list[dict[str, Any]], evidence: list[dict[str, Any]]) -> list[str]:
-    errors: list[str] = []
-    defined_evidence = {item.get("id") for item in evidence}
-    defined_missions = {item.get("id") for item in missions}
-    for mission in missions:
-        for evidence_id in mission.get("evidence_granted", []):
-            if evidence_id not in defined_evidence:
-                errors.append(f"granted evidence is not defined: {evidence_id}")
-    for item in evidence:
-        for mission_id in item.get("required_for", []):
-            if mission_id not in defined_missions:
-                errors.append(f"required mission is not defined: {mission_id}")
-    return errors
-
+    elif value not in known[kind]:
+        errors.append(f"unknown {label}: {value}")
 
 def validate(root: Path = ROOT) -> list[str]:
-    missions_data = load_json(root / "data" / "missions.json")
-    evidence_data = load_json(root / "data" / "evidence.json")
-    missions = missions_data.get("missions", [])
-    evidence = evidence_data.get("evidence", [])
-    evidence_ids = {item.get("id") for item in evidence if isinstance(item, dict)}
-    mission_ids = {item.get("id") for item in missions if isinstance(item, dict)}
-    errors = validate_missions(missions_data, evidence_ids)
-    errors.extend(validate_evidence(evidence_data, mission_ids))
-    errors.extend(validate_cross_references(missions, evidence))
+    files = {name: load(root / "data" / f"{name}.json") for name in ("missions", "evidence", "regions", "locations", "characters", "factions")}
+    collections = {name: files[name].get(name, []) for name in files}
+    errors: list[str] = []
+    known: dict[str, set[str]] = {}
+    for name, items in collections.items():
+        known[name.rstrip("s")] , local = ids(items, name.rstrip("s"))
+        errors.extend(local)
+    for item in collections["locations"]:
+        check_ref(item.get("region_id"), "region", f"location region in {item.get('id')}", known, errors)
+    for item in collections["missions"]:
+        mission_id = item.get("id")
+        for field, kind in (("region_id", "region"), ("location_id", "location")):
+            check_ref(item.get(field), kind, f"{field} in {mission_id}", known, errors)
+        for field, kind in (("characters", "character"), ("factions", "faction"), ("evidence_granted", "evidence")):
+            for value in item.get(field, []):
+                check_ref(value, kind, f"{field} in {mission_id}", known, errors)
+        for value in item.get("prerequisites", []):
+            if value.startswith("BC_MISSION_") and value not in known["mission"]:
+                errors.append(f"unknown prerequisite in {mission_id}: {value}")
+    for item in collections["evidence"]:
+        evidence_id = item.get("id")
+        check_ref(item.get("source_location"), "location", f"source location in {evidence_id}", known, errors)
+        for value in item.get("required_for", []):
+            check_ref(value, "mission", f"required mission in {evidence_id}", known, errors)
     return errors
 
-
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=ROOT)
     args = parser.parse_args()
     try:
@@ -138,12 +69,9 @@ def main() -> int:
         print(f"validation error: {exc}", file=sys.stderr)
         return 2
     if errors:
-        for error in errors:
-            print(f"ERROR: {error}", file=sys.stderr)
+        print("\n".join(f"ERROR: {error}" for error in errors), file=sys.stderr)
         return 1
     print("Content validation passed")
     return 0
-
-
 if __name__ == "__main__":
     raise SystemExit(main())
