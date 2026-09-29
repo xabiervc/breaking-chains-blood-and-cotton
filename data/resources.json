@@ -1,0 +1,17 @@
+{
+  "resources": [
+    {"id":"BC_RESOURCE_MEDICAL_SUPPLIES","name":"Suministros médicos","unit":"kits","transferable":true,"minimum":0},
+    {"id":"BC_RESOURCE_FOOD_RATIONS","name":"Raciones de comida","unit":"rations","transferable":true,"minimum":0},
+    {"id":"BC_RESOURCE_CURRENCY","name":"Moneda","unit":"credits","transferable":true,"minimum":0},
+    {"id":"BC_RESOURCE_DOCUMENTS","name":"Documentos","unit":"documents","transferable":true,"minimum":0},
+    {"id":"BC_RESOURCE_FUEL","name":"Combustible","unit":"liters","transferable":true,"minimum":0},
+    {"id":"BC_RESOURCE_TRANSPORT_CAPACITY","name":"Capacidad de transporte","unit":"seats","transferable":false,"minimum":0},
+    {"id":"BC_RESOURCE_SAFE_CAPACITY","name":"Plazas seguras","unit":"places","transferable":false,"minimum":0}
+  ],
+  "operations": [
+    {"id":"BC_OPERATION_MEDICAL_AID","inputs":[{"resource_id":"BC_RESOURCE_MEDICAL_SUPPLIES","amount":1}],"outputs":[]},
+    {"id":"BC_OPERATION_FEED_GROUP","inputs":[{"resource_id":"BC_RESOURCE_FOOD_RATIONS","amount":1}],"outputs":[]},
+    {"id":"BC_OPERATION_REFUEL_TRANSPORT","inputs":[{"resource_id":"BC_RESOURCE_FUEL","amount":1}],"outputs":[]},
+    {"id":"BC_OPERATION_PREPARE_DOCUMENTS","inputs":[{"resource_id":"BC_RESOURCE_DOCUMENTS","amount":1}],"outputs":[]}
+  ]
+}

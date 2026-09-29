@@ -1,0 +1,12 @@
+{
+  "factions": [
+    {"faction_id":"BC_FACTION_UNDERGROUND_RAIL","starting_reputation":0,"minimum":-5,"maximum":5},
+    {"faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","starting_reputation":0,"minimum":-5,"maximum":5},
+    {"faction_id":"BC_FACTION_ABOLITIONIST_NETWORK","starting_reputation":0,"minimum":-5,"maximum":5},
+    {"faction_id":"BC_FACTION_PLANTATION_OVERSEERS","starting_reputation":-2,"minimum":-5,"maximum":5}
+  ],
+  "deltas":[
+    {"id":"BC_REPUTATION_RESCUE_DELIVERED","operation_id":"BC_OPERATION_RESCUE_DELIVERED","faction_id":"BC_FACTION_UNDERGROUND_RAIL","delta":1,"reason":"Rescate entregado en destino seguro"},
+    {"id":"BC_REPUTATION_BETRAYAL","operation_id":"BC_OPERATION_BETRAYAL","faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","delta":-2,"reason":"Incumplimiento de un compromiso"}
+  ]
+}

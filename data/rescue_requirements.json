@@ -1,0 +1,7 @@
+{
+  "rescues": [
+    {"id":"BC_RESCUE_ASHGROVE_FAMILY","person_id":"BC_PERSON_ASHGROVE_FAMILY","status":"available","required_resources":[{"resource_id":"BC_RESOURCE_FOOD_RATIONS","amount":2},{"resource_id":"BC_RESOURCE_DOCUMENTS","amount":1}],"minimum_reputation":{"faction_id":"BC_FACTION_UNDERGROUND_RAIL","value":1},"required_transport_type":"river_boat","required_capacity":4,"destination_location_id":"BC_LOCATION_SAFEHOUSE_HARBOR"},
+    {"id":"BC_RESCUE_IRONWORK_WORKERS","person_id":"BC_PERSON_IRONWORK_WORKERS","status":"available","required_resources":[{"resource_id":"BC_RESOURCE_MEDICAL_SUPPLIES","amount":2},{"resource_id":"BC_RESOURCE_FUEL","amount":3}],"minimum_reputation":{"faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","value":2},"required_transport_type":"wagon","required_capacity":6,"destination_location_id":"BC_LOCATION_FREE_SETTLEMENT"}
+  ],
+  "statuses":["available","prepared","in_transit","delivered","failed_requirements"]
+}
