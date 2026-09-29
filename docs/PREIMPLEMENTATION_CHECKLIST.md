@@ -19,6 +19,7 @@
 - [x] Idempotencia documentada.
 - [x] Ausencia de azar oculto documentada.
 - [x] Contratos verificados mediante escenarios completos.
+- [x] Matriz de trazabilidad y handoff preparados.
 
 ## Verificación
 
