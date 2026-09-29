@@ -1,0 +1,7 @@
+{
+  "persons": [
+    {"id":"BC_PERSON_ASHGROVE_FAMILY","name":"Familia Ashgrove","status":"unrescued","origin_location_id":"BC_LOCATION_ASHGROVE_PLANTATION","protected":true},
+    {"id":"BC_PERSON_IRONWORK_WORKERS","name":"Trabajadores de Ironwork","status":"unrescued","origin_location_id":"BC_LOCATION_IRONWORKS","protected":true}
+  ],
+  "statuses":["unrescued","prepared","in_transit","safe","lost"]
+}

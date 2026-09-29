@@ -1,1 +1,10 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","version":"0.1.0","locations":[{"id":"BC_LOCATION_ASHGROVE_RECORDS_ROOM","region_id":"BC_REGION_SOUTHAMPTON_VA","name":"Ashgrove Records Room","type":"plantation_archive","classification":"FICTION","purpose":"Transfer records, ownership registers, and the first Isaiah evidence."},{"id":"BC_LOCATION_COASTAL_WAREHOUSE_RECORDS","region_id":"BC_REGION_COASTAL_CAROLINA","name":"Coastal Warehouse Records","type":"warehouse_archive","classification":"FICTION","purpose":"Transport records and route documentation."},{"id":"BC_LOCATION_TRADER_WAREHOUSE","region_id":"BC_REGION_NEW_ORLEANS_DELTA","name":"Trader Warehouse","type":"commercial_warehouse","classification":"FICTION","purpose":"Trader accounts, settlement pages, and trafficking logistics."},{"id":"BC_LOCATION_COUNTY_COURTHOUSE_ARCHIVE","region_id":"BC_REGION_SOUTHAMPTON_VA","name":"County Courthouse Archive","type":"court_archive","classification":"FICTION","purpose":"Orders, claims, testimony, and legal protection."},{"id":"BC_LOCATION_TRADER_CORRESPONDENCE_CACHE","region_id":"BC_REGION_NEW_ORLEANS_DELTA","name":"Trader Correspondence Cache","type":"private_archive","classification":"FICTION","purpose":"Private route notes and intermediary correspondence."},{"id":"BC_LOCATION_HIDDEN_REPAIR_WORKSHOP","region_id":"BC_REGION_COASTAL_CAROLINA","name":"Hidden Repair Workshop","type":"safe_house_workshop","classification":"FICTION","purpose":"A technical signal associated with Isaiah's network."}]}
+{
+  "locations": [
+    {"id":"BC_LOCATION_ASHGROVE_PLANTATION","name":"Plantación Ashgrove","region_id":"BC_REGION_DELTA_COUNTIES","type":"plantation"},
+    {"id":"BC_LOCATION_IRONWORKS","name":"Ironwork","region_id":"BC_REGION_RIVER_CORRIDOR","type":"industrial_site"},
+    {"id":"BC_LOCATION_SAFEHOUSE_HARBOR","name":"Casa segura del puerto","region_id":"BC_REGION_RIVER_CORRIDOR","type":"safehouse"},
+    {"id":"BC_LOCATION_FREE_SETTLEMENT","name":"Asentamiento libre","region_id":"BC_REGION_NORTHERN_ROUTE","type":"safe_settlement"},
+    {"id":"BC_LOCATION_COURTHOUSE","name":"Juzgado del condado","region_id":"BC_REGION_DELTA_COUNTIES","type":"courthouse"},
+    {"id":"BC_LOCATION_RIVER_FERRY","name":"Ferry del río","region_id":"BC_REGION_RIVER_CORRIDOR","type":"crossing"}
+  ]
+}
