@@ -1,0 +1,9 @@
+{
+  "transitions": [
+    {"id":"BC_RESCUE_TRANSITION_PREPARE","from_status":"available","to_status":"prepared","required_state":"BC_TRAVEL_STATE_AVAILABLE","requires_capacity":true},
+    {"id":"BC_RESCUE_TRANSITION_DEPART","from_status":"prepared","to_status":"in_transit","required_state":"BC_TRAVEL_STATE_IN_TRANSIT","requires_capacity":true},
+    {"id":"BC_RESCUE_TRANSITION_DELIVER","from_status":"in_transit","to_status":"delivered","required_state":"BC_TRAVEL_STATE_ARRIVED","requires_capacity":false},
+    {"id":"BC_RESCUE_TRANSITION_FAIL_REQUIREMENTS","from_status":"available","to_status":"failed_requirements","required_state":"BC_TRAVEL_STATE_FAILED_REQUIREMENTS","requires_capacity":false}
+  ],
+  "statuses":["available","prepared","in_transit","delivered","failed_requirements"]
+}

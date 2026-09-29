@@ -1,0 +1,6 @@
+{
+  "operations": [
+    {"id":"BC_OPERATION_PREPARE_ASHGROVE_RESCUE","mission_id":"BC_MISSION_LEDGER_ASHGROVE_ENTRY","rescue_id":"BC_RESCUE_ASHGROVE_FAMILY","required_travel_state":"BC_TRAVEL_STATE_AVAILABLE","next_travel_state":"BC_TRAVEL_STATE_IN_TRANSIT","resource_inputs":[{"resource_id":"BC_RESOURCE_FOOD_RATIONS","amount":2},{"resource_id":"BC_RESOURCE_DOCUMENTS","amount":1}],"reputation_requirement":{"faction_id":"BC_FACTION_UNDERGROUND_RAIL","minimum":1},"deterministic":true},
+    {"id":"BC_OPERATION_PREPARE_IRONWORK_RESCUE","mission_id":"BC_MISSION_LEDGER_IRONWORK_SIGNAL","rescue_id":"BC_RESCUE_IRONWORK_WORKERS","required_travel_state":"BC_TRAVEL_STATE_AVAILABLE","next_travel_state":"BC_TRAVEL_STATE_IN_TRANSIT","resource_inputs":[{"resource_id":"BC_RESOURCE_MEDICAL_SUPPLIES","amount":2},{"resource_id":"BC_RESOURCE_FUEL","amount":3}],"reputation_requirement":{"faction_id":"BC_FACTION_FREE_BLACK_COMMUNITY","minimum":2},"deterministic":true}
+  ]
+}
