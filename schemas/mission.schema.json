@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://breaking-chains-blood-and-cotton/schemas/mission.schema.json",
+  "title": "Breaking Chains Mission",
+  "type": "object",
+  "required": ["id", "act", "classification", "region_id", "location_id", "prerequisites", "objectives", "evidence_granted", "failure_states", "success_state", "characters", "factions", "resources", "rewards", "reputation_effects", "deterministic_inputs", "tags"],
+  "properties": {
+    "id": {"type":"string","pattern":"^BC_MISSION_[A-Z0-9_]+$"},
+    "act": {"type":"string","enum":["ACT_I_ESCAPE","ACT_II_THE_HUNT","ACT_III_RECKONING","ACT_IV_BREAKING_THE_SYSTEM"]},
+    "classification": {"type":"string","enum":["FACT","RECONSTRUCTION","FICTION","OPEN_QUESTION"]},
+    "region_id": {"type":"string","pattern":"^BC_REGION_[A-Z0-9_]+$"},
+    "location_id": {"type":"string","pattern":"^BC_LOCATION_[A-Z0-9_]+$"},
+    "prerequisites": {"type":"array","items":{"type":"string"}},
+    "objectives": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "evidence_granted": {"type":"array","items":{"type":"string","pattern":"^BC_EVIDENCE_[A-Z0-9_]+$"}},
+    "failure_states": {"type":"array","minItems":1,"items":{"type":"string","pattern":"^[A-Z0-9_]+$"}},
+    "success_state": {"type":"string","pattern":"^[A-Z0-9_]+$"},
+    "characters": {"type":"array","items":{"type":"string","pattern":"^BC_CHAR_[A-Z0-9_]+$"}},
+    "factions": {"type":"array","items":{"type":"string","pattern":"^BC_FACTION_[A-Z0-9_]+$"}},
+    "resources": {"type":"array","items":{"type":"string","pattern":"^[A-Z0-9_]+$"}},
+    "rewards": {"type":"array","items":{"type":"string"}},
+    "reputation_effects": {"type":"object","additionalProperties":{"type":"integer"}},
+    "deterministic_inputs": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "tags": {"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://breaking-chains-blood-and-cotton/schemas/evidence.schema.json",
+  "title": "Breaking Chains Evidence",
+  "type": "object",
+  "required": ["id", "classification", "type", "source_location", "supports", "can_be_destroyed", "required_for"],
+  "properties": {
+    "id": {"type":"string","pattern":"^BC_EVIDENCE_[A-Z0-9_]+$"},
+    "classification": {"type":"string","enum":["FACT","RECONSTRUCTION","FICTION","OPEN_QUESTION"]},
+    "type": {"type":"string","minLength":1},
+    "source_location": {"type":"string","pattern":"^BC_LOCATION_[A-Z0-9_]+$"},
+    "supports": {"type":"array","minItems":1,"items":{"type":"string","minLength":1}},
+    "can_be_destroyed": {"type":"boolean"},
+    "required_for": {"type":"array","items":{"type":"string","pattern":"^BC_MISSION_[A-Z0-9_]+$"}}
+  },
+  "additionalProperties": false
+}

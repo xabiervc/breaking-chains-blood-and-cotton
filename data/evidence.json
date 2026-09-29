@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.1.0",
+  "evidence": [
+    {"id":"BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY","classification":"FICTION","type":"plantation_ledger","source_location":"BC_LOCATION_ASHGROVE_RECORDS_ROOM","supports":["isaiah_transfer_date","isaiah_identity"],"can_be_destroyed":true,"required_for":["BC_MISSION_LEDGER_MANIFEST_FRAGMENT"]},
+    {"id":"BC_EVIDENCE_COASTWISE_MANIFEST_FRAGMENT","classification":"FICTION","type":"transport_manifest_fragment","source_location":"BC_LOCATION_COASTAL_WAREHOUSE_RECORDS","supports":["isaiah_removed_before_departure"],"can_be_destroyed":true,"required_for":["BC_MISSION_LEDGER_TRADER_SETTLEMENT"]},
+    {"id":"BC_EVIDENCE_TRADER_SETTLEMENT_PAGE","classification":"FICTION","type":"commercial_settlement_page","source_location":"BC_LOCATION_TRADER_WAREHOUSE","supports":["payment_interrupted"],"can_be_destroyed":true,"required_for":["BC_MISSION_LEDGER_PRIVATE_ROUTE_NOTE"]},
+    {"id":"BC_EVIDENCE_VANE_CORRECTED_ORDER","classification":"FICTION","type":"county_order","source_location":"BC_LOCATION_COUNTY_COURTHOUSE_ARCHIVE","supports":["vane_delayed_transfer"],"can_be_destroyed":true,"required_for":["BC_MISSION_LEDGER_PRIVATE_ROUTE_NOTE"]},
+    {"id":"BC_EVIDENCE_PRIVATE_ROUTE_NOTE","classification":"FICTION","type":"private_correspondence","source_location":"BC_LOCATION_TRADER_CORRESPONDENCE_CACHE","supports":["vane_protection_was_limited","alternate_buyer_intended"],"can_be_destroyed":true,"required_for":["BC_MISSION_LEDGER_IRONWORK_SIGNAL"]},
+    {"id":"BC_EVIDENCE_IRONWORK_SIGNATURE","classification":"FICTION","type":"technical_mark","source_location":"BC_LOCATION_HIDDEN_REPAIR_WORKSHOP","supports":["isaiah_survival"],"can_be_destroyed":false,"required_for":[]}
+  ]
+}
