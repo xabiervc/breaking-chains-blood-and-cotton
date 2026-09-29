@@ -22,6 +22,7 @@
 
 - [x] Tests unitarios, transversales e invariantes presentes.
 - [x] Validador global presente.
+- [x] Validador de esquemas y JSON presente.
 - [x] Workflow de GitHub Actions configurado.
 - [ ] Ejecución CI confirmada en GitHub Actions.
 
