@@ -1,0 +1,6 @@
+{
+  "bindings": [
+    {"id":"BC_BINDING_ASHGROVE_SCENE","scene_id":"BC_SCENE_ASHGROVE_PREPARATION","operation_id":"BC_OPERATION_PREPARE_ASHGROVE_RESCUE","rescue_id":"BC_RESCUE_ASHGROVE_FAMILY","audit_event_type":"rescue_transition","scenario_id":"BC_SCENARIO_ASHGROVE_SUCCESS"},
+    {"id":"BC_BINDING_IRONWORK_SCENE","scene_id":"BC_SCENE_IRONWORK_SIGNAL","operation_id":"BC_OPERATION_PREPARE_IRONWORK_RESCUE","rescue_id":"BC_RESCUE_IRONWORK_WORKERS","audit_event_type":"mission_operation","scenario_id":"BC_SCENARIO_IRONWORK_REQUIREMENTS_FAILURE"}
+  ]
+}
