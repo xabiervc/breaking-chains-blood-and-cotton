@@ -20,7 +20,7 @@
 
 ## Verificación
 
-- [x] Tests unitarios y transversales presentes.
+- [x] Tests unitarios, transversales e invariantes presentes.
 - [x] Validador global presente.
 - [x] Workflow de GitHub Actions configurado.
 - [ ] Ejecución CI confirmada en GitHub Actions.
