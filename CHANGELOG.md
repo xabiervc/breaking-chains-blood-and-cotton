@@ -2,13 +2,13 @@
 
 ## 0.1.0-preimplementation — 2026-09-30
 
-- Added Level A preproduction standard and evidence gates.
-- Added content inventory and implementation decision log.
-- Added authoritative/subordinate/archived document register.
-- Added operational vertical-slice evidence template.
-- Added honest external-evidence status tracking.
+- Added final Level A governance and design authority.
+- Added explicit must-fix, prototype hypotheses and evidence plan.
+- Added accessibility test plan and sensitive-content representation matrix.
+- Added A1–A7 completion matrix with external evidence separated.
+- Preserved honest production block until real evidence exists.
 
 ## Previous changes
 
-- Added canonical preproduction source of truth, scope and traceability matrices.
-- Added deterministic world, travel, economy, rescue, audit, safety and narrative catalogs.
+- Added canonical preproduction source of truth, scope, traceability and vertical slice specification.
+- Added historical ethics, accessibility, technical readiness, deterministic systems and CI documentation.

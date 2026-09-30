@@ -1,0 +1,13 @@
+{
+  "criteria": [
+    {"id":"BC_A1_IDENTITY","area":"identity","definition_status":"defined","evidence_status":"external_pending","source":"docs/CANONICAL_PREPRODUCTION_SPEC.md","next_evidence":"prototype_review"},
+    {"id":"BC_A2_GAMEPLAY","area":"gameplay","definition_status":"defined","evidence_status":"external_pending","source":"docs/GAMEPLAY_PILLARS_AND_FIRST_HOUR.md","next_evidence":"vertical_slice_playtest"},
+    {"id":"BC_A3_NARRATIVE","area":"narrative","definition_status":"defined","evidence_status":"external_pending","source":"docs/CAMPAIGN_ARC_AND_NARRATIVE_STATES.md","next_evidence":"historical_and_sensitivity_review"},
+    {"id":"BC_A4_PRODUCTION","area":"production","definition_status":"defined","evidence_status":"external_pending","source":"docs/VERTICAL_SLICE_SPEC.md","next_evidence":"slice_build_and_metrics"},
+    {"id":"BC_A5_ACCESSIBILITY","area":"accessibility","definition_status":"defined","evidence_status":"external_pending","source":"docs/ACCESSIBILITY_ACCEPTANCE.md","next_evidence":"user_and_tool_audit"},
+    {"id":"BC_A6_TRACEABILITY","area":"traceability","definition_status":"defined","evidence_status":"external_pending","source":"docs/DECISION_TRACEABILITY_MATRIX.md","next_evidence":"implementation_and_regression_tests"},
+    {"id":"BC_A7_HONEST_CLOSURE","area":"honest_closure","definition_status":"defined","evidence_status":"defined","source":"docs/LEVEL_A_PREPRODUCTION_STANDARD.md","next_evidence":"none"}
+  ],
+  "overall_definition_status":"level_a_defined",
+  "overall_evidence_status":"external_pending"
+}

@@ -2,17 +2,19 @@
 
 Preimplementación determinista de un juego narrativo sistémico y coral sobre redes de ayuda, rescate, información y supervivencia bajo la economía colonial del algodón.
 
-## Fuente de verdad
+## Estado A
 
-La fuente única de verdad es `docs/CANONICAL_PREPRODUCTION_SPEC.md`. Los documentos históricos y subordinados están catalogados en `docs/ARCHIVED_DOCUMENTS.md`.
+La definición de preproducción alcanza nivel A: la identidad, el bucle, la campaña, los sistemas conceptuales, la accesibilidad, la ética, el alcance, la trazabilidad y los criterios de aceptación están documentados. La autoridad documental está en `docs/DESIGN_AUTHORITY.md` y `docs/CANONICAL_PREPRODUCTION_SPEC.md`.
 
-## Estado
+## Listo para iniciar
 
-Versión: `0.1.0-preimplementation`.
+Puede comenzar un prototipo o vertical slice controlado. Las hipótesis están en `docs/PROTOTYPE_HYPOTHESES.md` y los gates operativos en `docs/VERTICAL_SLICE_SPEC.md` y `docs/VERTICAL_SLICE_EVIDENCE_TEMPLATE.md`.
 
-La preimplementación incluye bucle de juego, campaña, estados narrativos, decisiones, consecuencias, accesibilidad medible, representación histórica, plataforma, presupuestos técnicos, guardado, privacidad, localización, alcance, trazabilidad y gates de vertical slice.
+## No afirmar todavía
 
-## Verificación
+No se debe afirmar que el control es divertido, que la representación está validada, que la accesibilidad funciona para usuarios reales, que el rendimiento cumple o que la producción plena está autorizada hasta obtener la evidencia correspondiente.
+
+## Verificación local
 
 ```bash
 conda env create -f environment.yml
@@ -21,5 +23,3 @@ python tools/validate_content.py
 python schemas/validate_schemas.py
 python -m unittest discover -s tests -v
 ```
-
-La documentación no sustituye evidencia. CI verde, playtesting, consulta histórica, revisión cultural, auditoría de accesibilidad y métricas del vertical slice siguen siendo requisitos externos antes de producción.
