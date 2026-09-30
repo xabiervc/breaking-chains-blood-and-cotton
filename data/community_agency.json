@@ -1,0 +1,9 @@
+{
+  "dimensions": [
+    {"id":"BC_AGENCY_FAMILY_SAFETY","choices":["protect_family","split_route","delay_action"]},
+    {"id":"BC_AGENCY_INFORMATION","choices":["share_evidence","withhold_evidence","verify_first"]},
+    {"id":"BC_AGENCY_RESISTANCE","choices":["visible_resistance","silent_resistance","mutual_aid"]},
+    {"id":"BC_AGENCY_CULTURAL_CONTINUITY","choices":["preserve_records","protect_rituals","carry_stories"]}
+  ],
+  "external_savior_prohibited":true
+}

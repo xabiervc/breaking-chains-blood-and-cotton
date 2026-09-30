@@ -1,0 +1,8 @@
+{
+  "systems": [
+    {"id":"BC_COTTON_PRODUCTION","layer":"production","represented_through":["forced_labor","surveillance","fatigue","knowledge"],"not_a_repetitive_minigame":true},
+    {"id":"BC_COTTON_TRADE","layer":"trade","represented_through":["ledgers","intermediaries","prices","river_routes"],"not_a_repetitive_minigame":true},
+    {"id":"BC_COTTON_DEBT","layer":"debt","represented_through":["credit","dependency","ownership_records","risk"],"not_a_repetitive_minigame":true},
+    {"id":"BC_COTTON_LOGISTICS","layer":"logistics","represented_through":["warehouses","boats","wagons","documents","fuel"],"not_a_repetitive_minigame":true}
+  ]
+}

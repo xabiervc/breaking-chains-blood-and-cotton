@@ -1,12 +1,16 @@
 # Breaking Chains: Blood and Cotton
 
-Preimplementación determinista de un juego narrativo sobre redes de fuga, rescates y decisiones bajo presión.
+Preimplementación determinista de un juego narrativo sobre redes de fuga, rescates y decisiones bajo presión, con perspectiva coral y comunitaria.
 
 ## Estado
 
 Versión: `0.1.0-preimplementation`.
 
-La preimplementación incluye catálogos de mundo, viajes, economía, rescates, reputación, auditoría, guardas, escenarios end-to-end, narrativa canónica, escenas, decisiones, accesibilidad, esquemas JSON, validación global y tests.
+La preimplementación incluye catálogos de mundo, viajes, economía, algodón, rescates, reputación, auditoría, guardas, escenarios end-to-end, narrativa canónica, escenas, decisiones, accesibilidad y un marco histórico, ético y de representación.
+
+## Salvaguardas de producción
+
+La producción está bloqueada hasta completar el protocolo de consulta con historiadores, especialistas en estudios afroamericanos, consultores comunitarios, lectores sensibles y especialistas en accesibilidad.
 
 ## Ejecutar localmente
 
@@ -20,6 +24,4 @@ python -m unittest discover -s tests -v
 
 ## Criterio de calidad
 
-`docs/QUALITY_BAR.md`, `docs/DESIGN_PILLARS.md` y `docs/ACCESSIBILITY_SPEC.md` convierten el objetivo de calidad en criterios verificables. Alcanzar un estándar de premios requiere además implementación, playtesting, revisión humana, localización y una ejecución CI verde.
-
-Consulta `docs/TRACEABILITY_MATRIX.md`, `docs/IMPLEMENTATION_HANDOFF.md` y `docs/PREIMPLEMENTATION_FINAL_STATUS.md` para la trazabilidad y el siguiente paso.
+El estándar de diseño y accesibilidad está documentado en `docs/QUALITY_BAR.md`, `docs/DESIGN_PILLARS.md` y `docs/ACCESSIBILITY_SPEC.md`. La obra no debe presentarse como históricamente validada ni lista para producción hasta completar revisión externa, playtesting y CI verde.

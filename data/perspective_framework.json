@@ -1,0 +1,7 @@
+{
+  "perspectives": [
+    {"id":"BC_PERSPECTIVE_CORAL_COMMUNITY","primary":true,"voices":["enslaved_people","free_black_community","free_workers","abolitionist_network"],"external_savior_prohibited":true},
+    {"id":"BC_PERSPECTIVE_ISAIAH_CONNECTOR","primary":false,"role":"connector","limits":["cannot_act_without_local_knowledge","cannot_resolve_system_alone"]}
+  ],
+  "agency_dimensions":["family_safety","information_protection","network_building","resource_access","collective_risk","cultural_continuity","visible_resistance","silent_resistance"]
+}
