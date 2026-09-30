@@ -1,0 +1,11 @@
+{
+  "criteria": [
+    {"id":"BC_ACCESS_CRITERION_TEXT_SCALE","metric":"critical_text_scale_percent","target_min":200,"verification":"ui_test"},
+    {"id":"BC_ACCESS_CRITERION_CONTRAST","metric":"normal_text_contrast_ratio","target_min":4.5,"verification":"automated_audit"},
+    {"id":"BC_ACCESS_CRITERION_SUBTITLES","metric":"speaker_identification","target":true,"verification":"manual_and_ui_test"},
+    {"id":"BC_ACCESS_CRITERION_REDUNDANT_SIGNALS","metric":"audio_visual_equivalence","target":true,"verification":"accessibility_test"},
+    {"id":"BC_ACCESS_CRITERION_REMAP","metric":"keyboard_controller_remap","target":true,"verification":"input_test"},
+    {"id":"BC_ACCESS_CRITERION_TIMING","metric":"timed_action_alternative","target":true,"verification":"playtest"},
+    {"id":"BC_ACCESS_CRITERION_SAVE","metric":"safe_scene_checkpoint","target":true,"verification":"save_test"}
+  ]
+}

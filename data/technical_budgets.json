@@ -1,0 +1,7 @@
+{
+  "budgets": [
+    {"platform_id":"BC_PLATFORM_PC","memory_mb":4096,"target_fps":60,"minimum_sustained_fps":30,"initial_load_seconds_max":8},
+    {"platform_id":"BC_PLATFORM_STEAM_DECK","memory_mb":4096,"target_fps":40,"minimum_sustained_fps":30,"initial_load_seconds_max":12},
+    {"platform_id":"BC_PLATFORM_CONSOLE","memory_mb":6144,"target_fps":60,"minimum_sustained_fps":30,"initial_load_seconds_max":10}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "platforms": [
+    {"id":"BC_PLATFORM_PC","priority":"primary","input":["keyboard","controller"],"phase":"vertical_slice"},
+    {"id":"BC_PLATFORM_STEAM_DECK","priority":"secondary","input":["controller","touchpad"],"phase":"post_vertical_slice"},
+    {"id":"BC_PLATFORM_CONSOLE","priority":"secondary","input":["controller"],"phase":"post_vertical_slice"}
+  ]
+}

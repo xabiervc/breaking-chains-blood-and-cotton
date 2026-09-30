@@ -6,13 +6,9 @@ Preimplementación determinista de un juego narrativo sobre redes de fuga, resca
 
 Versión: `0.1.0-preimplementation`.
 
-La preimplementación incluye catálogos de mundo, viajes, economía, algodón, rescates, reputación, auditoría, guardas, escenarios end-to-end, narrativa canónica, escenas, decisiones, accesibilidad y un marco histórico, ético y de representación.
+La preimplementación incluye diseño de primeros minutos y primera hora, arco de campaña, estados narrativos, accesibilidad medible, plataformas, presupuestos técnicos, guardado y migración, telemetría privada, localización, auditoría, escenarios, narrativa canónica y tests.
 
-## Salvaguardas de producción
-
-La producción está bloqueada hasta completar el protocolo de consulta con historiadores, especialistas en estudios afroamericanos, consultores comunitarios, lectores sensibles y especialistas en accesibilidad.
-
-## Ejecutar localmente
+## Verificación local
 
 ```bash
 conda env create -f environment.yml
@@ -22,6 +18,6 @@ python schemas/validate_schemas.py
 python -m unittest discover -s tests -v
 ```
 
-## Criterio de calidad
+## Gates
 
-El estándar de diseño y accesibilidad está documentado en `docs/QUALITY_BAR.md`, `docs/DESIGN_PILLARS.md` y `docs/ACCESSIBILITY_SPEC.md`. La obra no debe presentarse como históricamente validada ni lista para producción hasta completar revisión externa, playtesting y CI verde.
+Los criterios de `docs/VERTICAL_SLICE_GATES.md` separan lo que está definido de lo que está demostrado. La documentación no sustituye implementación, playtesting, consulta histórica, auditoría de accesibilidad ni una ejecución CI verde.
