@@ -1,0 +1,13 @@
+{
+  "options": [
+    {"id":"BC_ACCESS_TEXT_SCALE","type":"visual","values":[100,125,150,200],"default":100,"required":true},
+    {"id":"BC_ACCESS_HIGH_CONTRAST","type":"visual","values":[true,false],"default":false,"required":true},
+    {"id":"BC_ACCESS_SUBTITLES","type":"audio_visual","values":[true,false],"default":true,"required":true},
+    {"id":"BC_ACCESS_SUBTITLE_SIZE","type":"visual","values":[100,125,150,200],"default":100,"required":true},
+    {"id":"BC_ACCESS_REMAP_CONTROLS","type":"input","values":[true,false],"default":true,"required":true},
+    {"id":"BC_ACCESS_HOLD_ALTERNATIVE","type":"input","values":[true,false],"default":true,"required":true},
+    {"id":"BC_ACCESS_TIMED_DECISIONS","type":"cognitive","values":["standard","extended","none"],"default":"extended","required":true},
+    {"id":"BC_ACCESS_HINTS","type":"cognitive","values":[true,false],"default":true,"required":true},
+    {"id":"BC_ACCESS_PAUSE_CUTSCENES","type":"control","values":[true,false],"default":true,"required":true}
+  ]
+}

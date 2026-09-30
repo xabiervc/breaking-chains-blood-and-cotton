@@ -1,0 +1,8 @@
+{
+  "choices": [
+    {"id":"BC_CHOICE_ASHGROVE_FAST","scene_id":"BC_SCENE_ASHGROVE_PREPARATION","label":"Actuar con rapidez","requires":[],"effects":["resource_pressure_increases","exposure_risk_increases"],"deterministic":true},
+    {"id":"BC_CHOICE_ASHGROVE_SAFE","scene_id":"BC_SCENE_ASHGROVE_PREPARATION","label":"Esperar una ruta más segura","requires":["BC_RESOURCE_DOCUMENTS"],"effects":["exposure_risk_decreases","time_pressure_increases"],"deterministic":true},
+    {"id":"BC_CHOICE_IRONWORK_VERIFY","scene_id":"BC_SCENE_IRONWORK_SIGNAL","label":"Verificar la señal","requires":["BC_EVIDENCE_ASHGROVE_TRANSFER_ENTRY"],"effects":["ironwork_signal_verified","abolitionist_network_trust_increases"],"deterministic":true},
+    {"id":"BC_CHOICE_IRONWORK_DELAY","scene_id":"BC_SCENE_IRONWORK_SIGNAL","label":"Proteger la red y retrasar la salida","requires":[],"effects":["rescue_window_narrows","underground_rail_exposure_decreases"],"deterministic":true}
+  ]
+}

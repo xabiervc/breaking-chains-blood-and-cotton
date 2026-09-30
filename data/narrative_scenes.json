@@ -1,0 +1,6 @@
+{
+  "scenes": [
+    {"id":"BC_SCENE_ASHGROVE_PREPARATION","sequence":30,"mission_id":"BC_MISSION_LEDGER_ASHGROVE_ENTRY","characters":["BC_NARRATIVE_CHAR_ISAIAH_BELL","BC_NARRATIVE_GROUP_ASHGROVE_FAMILY"],"location_id":"BC_LOCATION_ASHGROVE_PLANTATION","objective":"Decidir si Isaiah usa la entrada del libro para preparar la salida","choice_ids":["BC_CHOICE_ASHGROVE_FAST","BC_CHOICE_ASHGROVE_SAFE"],"consequence_ids":["BC_CONSEQUENCE_LEDGER_FOUND"]},
+    {"id":"BC_SCENE_IRONWORK_SIGNAL","sequence":40,"mission_id":"BC_MISSION_LEDGER_IRONWORK_SIGNAL","characters":["BC_NARRATIVE_CHAR_ISAIAH_BELL","BC_NARRATIVE_GROUP_IRONWORK_WORKERS"],"location_id":"BC_LOCATION_IRONWORKS","objective":"Verificar la señal sin exponer la ruta","choice_ids":["BC_CHOICE_IRONWORK_VERIFY","BC_CHOICE_IRONWORK_DELAY"],"consequence_ids":["BC_CONSEQUENCE_SIGNAL_VERIFIED"]}
+  ]
+}
