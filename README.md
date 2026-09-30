@@ -1,14 +1,18 @@
 # Breaking Chains: Blood and Cotton
 
-Preimplementación determinista de un juego narrativo sobre redes de fuga, rescates y decisiones bajo presión, con perspectiva coral y comunitaria.
+Preimplementación determinista de un juego narrativo sistémico y coral sobre redes de ayuda, rescate, información y supervivencia bajo la economía colonial del algodón.
+
+## Fuente de verdad
+
+La fuente única de verdad es `docs/CANONICAL_PREPRODUCTION_SPEC.md`. Los documentos históricos y subordinados están catalogados en `docs/ARCHIVED_DOCUMENTS.md`.
 
 ## Estado
 
 Versión: `0.1.0-preimplementation`.
 
-La preimplementación incluye diseño de primeros minutos y primera hora, arco de campaña, estados narrativos, accesibilidad medible, plataformas, presupuestos técnicos, guardado y migración, telemetría privada, localización, auditoría, escenarios, narrativa canónica y tests.
+La preimplementación incluye bucle de juego, campaña, estados narrativos, decisiones, consecuencias, accesibilidad medible, representación histórica, plataforma, presupuestos técnicos, guardado, privacidad, localización, alcance, trazabilidad y gates de vertical slice.
 
-## Verificación local
+## Verificación
 
 ```bash
 conda env create -f environment.yml
@@ -18,6 +22,4 @@ python schemas/validate_schemas.py
 python -m unittest discover -s tests -v
 ```
 
-## Gates
-
-Los criterios de `docs/VERTICAL_SLICE_GATES.md` separan lo que está definido de lo que está demostrado. La documentación no sustituye implementación, playtesting, consulta histórica, auditoría de accesibilidad ni una ejecución CI verde.
+La documentación no sustituye evidencia. CI verde, playtesting, consulta histórica, revisión cultural, auditoría de accesibilidad y métricas del vertical slice siguen siendo requisitos externos antes de producción.

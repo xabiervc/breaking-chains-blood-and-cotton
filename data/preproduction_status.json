@@ -1,0 +1,9 @@
+{
+  "statuses": [
+    {"id":"BC_STATUS_MANDATORY","items":["canonical_spec","scope_matrix","decision_traceability","vertical_slice_spec","accessibility_acceptance","technical_readiness","historical_consultation_protocol"]},
+    {"id":"BC_STATUS_ASPIRATIONAL","items":["award_level_quality","full_campaign_playtest","multi_platform_release","complete_localization"]},
+    {"id":"BC_STATUS_EXTERNAL_PENDING","items":["ci_success","historical_review_complete","sensitivity_review_complete","accessibility_user_testing","vertical_slice_metrics"]},
+    {"id":"BC_STATUS_BLOCKED","items":["full_production_before_external_review","unvalidated_canon_changes","unmeasured_performance_claims"]}
+  ],
+  "source_of_truth":"docs/CANONICAL_PREPRODUCTION_SPEC.md"
+}
