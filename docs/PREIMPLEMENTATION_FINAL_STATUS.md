@@ -2,28 +2,26 @@
 
 ## Dictamen
 
-La definición de preproducción alcanza nivel A: identidad, bucle, narrativa, producción, accesibilidad, trazabilidad y cierre honesto están especificados y gobernados.
+La preimplementación alcanza nivel A documental y queda congelada para iniciar un prototipo o vertical slice controlado.
 
-## Decisiones cerradas
+## Definido y congelado
 
-- Perspectiva coral y comunitaria.
-- Bucle de evidencia, preparación, decisión, viaje y consecuencia.
-- Campaña de cuatro capítulos.
-- Decisión diferencial de compartir o proteger información.
-- Alcance del vertical slice.
-- Criterios de accesibilidad y objetivos técnicos.
-- Límites éticos y protocolo de consulta.
+- Fuente y autoridad documental.
+- Identidad, perspectiva y pilares.
+- Bucle y decisión diferencial.
+- Campaña, estados, personajes y canon.
+- Alcance y matriz de contenido.
+- Accesibilidad con criterios medibles.
+- Preparación técnica, riesgos y dependencias.
+- Representación histórica, límites y consulta.
+- Trazabilidad y criterios de aceptación.
 
-## Hipótesis de prototipo
+## Validación externa pendiente
 
-La comprensión del riesgo, la agencia comunitaria, la lectura del algodón como infraestructura, la motivación tras el fracaso y la no penalización de accesibilidad requieren prototipo y pruebas.
+CI, vertical slice, playtesting, consulta histórica/cultural, lectores sensibles, auditoría de accesibilidad, rendimiento y localización piloto permanecen pendientes en `docs/OPEN_VALIDATION_REGISTER.md`.
 
-## Bloqueos estructurales
+## Estado oficial
 
-No hay bloqueos estructurales documentales para iniciar un prototipo o vertical slice controlado.
+`0.1.0-preimplementation — frozen_for_prototype`.
 
-## Bloqueos de producción plena
-
-CI verde, vertical slice medido, playtesting, revisión histórica/cultural, auditoría de accesibilidad, rendimiento y localización piloto siguen pendientes de evidencia externa.
-
-El estado oficial no se eleva a producción: `0.1.0-preimplementation`.
+La producción completa sigue bloqueada hasta completar las validaciones externas.

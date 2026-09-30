@@ -2,11 +2,11 @@
 
 ## 0.1.0-preimplementation — 2026-09-30
 
-- Added final Level A governance and design authority.
-- Added explicit must-fix, prototype hypotheses and evidence plan.
-- Added accessibility test plan and sensitive-content representation matrix.
-- Added A1–A7 completion matrix with external evidence separated.
-- Preserved honest production block until real evidence exists.
+- Frozen Level A preproduction baseline for prototype/vertical slice.
+- Added document authority index and formal change control.
+- Added open external validation register.
+- Added final signoff separating prototype authorization from production authorization.
+- Preserved honest production block until evidence exists.
 
 ## Previous changes
 

@@ -1,0 +1,9 @@
+{
+  "baseline_status":"frozen_for_prototype",
+  "definition_level":"A",
+  "production_status":"blocked_pending_external_evidence",
+  "frozen_decisions":["identity","perspective","core_loop","campaign","ethical_limits","accessibility_targets","vertical_slice_scope"],
+  "prototype_hypotheses":["loop_fun","risk_legibility","community_agency","resource_balance","cognitive_load"],
+  "open_validations":["ci","vertical_slice","playtesting","historical_review","sensitivity_review","accessibility_audit","performance","localization"],
+  "change_control":"formal_decision_required"
+}

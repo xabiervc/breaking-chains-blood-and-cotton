@@ -2,17 +2,19 @@
 
 Preimplementación determinista de un juego narrativo sistémico y coral sobre redes de ayuda, rescate, información y supervivencia bajo la economía colonial del algodón.
 
-## Estado A
+## Estado
 
-La definición de preproducción alcanza nivel A: la identidad, el bucle, la campaña, los sistemas conceptuales, la accesibilidad, la ética, el alcance, la trazabilidad y los criterios de aceptación están documentados. La autoridad documental está en `docs/DESIGN_AUTHORITY.md` y `docs/CANONICAL_PREPRODUCTION_SPEC.md`.
+`0.1.0-preimplementation — frozen_for_prototype`.
 
-## Listo para iniciar
+La definición documental alcanza nivel A y está congelada para iniciar un prototipo o vertical slice controlado. La autoridad está en `docs/DOCUMENT_AUTHORITY_INDEX.md` y `docs/DESIGN_AUTHORITY.md`.
 
-Puede comenzar un prototipo o vertical slice controlado. Las hipótesis están en `docs/PROTOTYPE_HYPOTHESES.md` y los gates operativos en `docs/VERTICAL_SLICE_SPEC.md` y `docs/VERTICAL_SLICE_EVIDENCE_TEMPLATE.md`.
+## Siguiente fase
 
-## No afirmar todavía
+Construir el vertical slice descrito en `docs/VERTICAL_SLICE_SPEC.md` y registrar cada resultado en `docs/VERTICAL_SLICE_EVIDENCE_TEMPLATE.md` y `docs/OPEN_VALIDATION_REGISTER.md`.
 
-No se debe afirmar que el control es divertido, que la representación está validada, que la accesibilidad funciona para usuarios reales, que el rendimiento cumple o que la producción plena está autorizada hasta obtener la evidencia correspondiente.
+## Condición de producción
+
+No se autoriza producción completa hasta que CI, vertical slice, playtesting, consulta histórica/cultural, lectores sensibles, auditoría de accesibilidad, rendimiento y localización piloto tengan evidencia fechada y revisada.
 
 ## Verificación local
 
