@@ -1,0 +1,13 @@
+{
+  "gates": [
+    {"id":"BC_LEVEL_A_DEFINITION","category":"definition","required":true,"status":"defined","evidence":"canonical_spec_and_matrices"},
+    {"id":"BC_LEVEL_A_CI","category":"verification","required":true,"status":"external_pending","evidence":"successful_workflow_run"},
+    {"id":"BC_LEVEL_A_VERTICAL_SLICE","category":"validation","required":true,"status":"external_pending","evidence":"playable_slice_measurement"},
+    {"id":"BC_LEVEL_A_PLAYTEST","category":"validation","required":true,"status":"external_pending","evidence":"diverse_user_playtest"},
+    {"id":"BC_LEVEL_A_HISTORICAL_REVIEW","category":"ethics","required":true,"status":"external_pending","evidence":"consultation_record"},
+    {"id":"BC_LEVEL_A_ACCESSIBILITY_AUDIT","category":"accessibility","required":true,"status":"external_pending","evidence":"user_and_tool_audit"},
+    {"id":"BC_LEVEL_A_PERFORMANCE","category":"technical","required":true,"status":"external_pending","evidence":"platform_measurements"},
+    {"id":"BC_LEVEL_A_LOCALIZATION","category":"production","required":true,"status":"external_pending","evidence":"pilot_review"}
+  ],
+  "status_vocabulary":["defined","in_progress","external_pending","passed","blocked"]
+}

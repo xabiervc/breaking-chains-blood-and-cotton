@@ -1,33 +1,26 @@
 # Checklist de preimplementación
 
-## Catálogos
+## Definición A
 
-- [x] Mundo, misiones, evidencias, regiones y localizaciones.
-- [x] Personajes, facciones, rutas y transportes.
-- [x] Estados de viaje deterministas.
-- [x] Personas y requisitos de rescate.
-- [x] Recursos, operaciones y reputación.
-- [x] Operaciones de misión y transiciones de rescate.
-- [x] Eventos de auditoría y guardas de seguridad.
-- [x] Escenarios end-to-end.
-- [x] Biblia narrativa, secuencia, consecuencias y bindings de runtime.
+- [x] Fuente única de verdad.
+- [x] Registro de documentos authoritative, subordinados y archivados.
+- [x] Bucle y decisión diferencial.
+- [x] Campaña, estados, personajes y canon.
+- [x] Matriz de decisiones y consecuencias.
+- [x] Matriz de alcance cuantificado.
+- [x] Vertical slice especificado.
+- [x] Accesibilidad con criterios medibles.
+- [x] Preparación técnica y presupuestos.
+- [x] Representación histórica y protocolo de consulta.
 
-## Integración
+## Evidencia externa — no simulada
 
-- [x] Referencias cruzadas técnicas.
-- [x] Cadena narrativa Ashgrove → Ironwork.
-- [x] Estados de viaje conectados con rescates.
-- [x] Economía separada de las personas rescatadas.
-- [x] Idempotencia y auditoría documentadas.
-- [x] Ramificaciones narrativas deterministas.
-- [x] Trazabilidad narrativa hasta runtime.
+- [ ] CI verde sobre el commit candidato.
+- [ ] Vertical slice jugable y medido.
+- [ ] Playtesting diverso.
+- [ ] Revisión histórica y cultural.
+- [ ] Auditoría de accesibilidad.
+- [ ] Rendimiento medido.
+- [ ] Localización piloto.
 
-## Verificación
-
-- [x] Tests unitarios, transversales, invariantes, end-to-end y narrativos presentes.
-- [x] Validador global.
-- [x] Validador de esquemas y JSON.
-- [x] Workflow de GitHub Actions.
-- [ ] Ejecución CI confirmada como `success`.
-
-La última casilla sigue requiriendo una ejecución real del workflow.
+Las casillas externas no se marcan mediante documentación. Requieren evidencias registradas con fecha, versión, responsable y resultado.

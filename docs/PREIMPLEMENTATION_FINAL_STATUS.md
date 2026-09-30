@@ -1,16 +1,24 @@
 # Estado final de preimplementación
 
-## Completado
+## Definición completada
 
-- Catálogos narrativos, geográficos y de viajes.
-- Recursos, reputación, personas y rescates.
-- Operaciones deterministas y escenarios end-to-end.
-- Auditoría, idempotencia y guardas de seguridad.
-- Validación global y validación de esquemas/JSON.
-- Tests unitarios, transversales, invariantes y end-to-end.
-- Workflow de GitHub Actions con Conda.
-- Documentación operativa, contratos, release gates y matriz de trazabilidad.
+- Fuente única de verdad.
+- Bucle, campaña, estados y canon.
+- Decisiones trazables a variables, escenas, resultados y tests.
+- Alcance cuantificado.
+- Vertical slice especificado operativamente.
+- Accesibilidad medible.
+- Plataforma, rendimiento, memoria, guardado, migración, privacidad y localización definidos.
+- Representación histórica, límites de contenido y protocolo de consulta documentados.
 
-## Pendiente de verificación externa
+## Evidencia externa pendiente
 
-La ejecución real de GitHub Actions sobre el commit candidato debe terminar en `success`. Hasta ese momento, el estado oficial permanece `0.1.0-preimplementation`.
+- CI verde sobre el commit candidato.
+- Vertical slice jugable y medido.
+- Playtesting diverso.
+- Revisión histórica, cultural y de lectores sensibles.
+- Auditoría de accesibilidad.
+- Rendimiento medido por plataforma.
+- Localización piloto.
+
+La documentación alcanza el estándar de definición A. El proyecto no debe declararse listo para producción plena hasta completar las evidencias externas.
